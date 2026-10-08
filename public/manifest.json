@@ -1,0 +1,10 @@
+{
+  "name": "MUM Baking House",
+  "short_name": "MUM",
+  "description": "Cookies NY, alfajores de especialidad y tortas decoradas en Buenos Aires",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFEAF1",
+  "theme_color": "#FFC9DC",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

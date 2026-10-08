@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tipografías autoalojadas (solo latín, livianas) */
+@font-face {
+  font-family: 'Antonio';
+  src: url('./assets/fonts/antonio.woff2') format('woff2-variations');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Shantell';
+  src: url('./assets/fonts/shantell.woff2') format('woff2-variations');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    background-color: #ffeaf1;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  body {
+    @apply bg-rosa font-sans text-choco antialiased;
+    overflow-x: clip;
+    font-feature-settings: 'kern';
+  }
+  ::selection {
+    background: #8e97f0;
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 3px solid #4f55b8;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  input[type='date'] {
+    min-height: 48px;
+  }
+}
+
+@layer utilities {
+  .capitalize-first::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
